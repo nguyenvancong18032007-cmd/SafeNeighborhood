@@ -81,4 +81,4 @@ project/
 
 - Figma:https://www.figma.com/make/Q3F3EYAw5HoFgc2YPqz8SQ/Design-System-for-SafeNeighborhood?t=qjcCzrTbR40lLk9D-1
 - Video trình bày:https://youtu.be/b597krxAbtE?si=rqi_RDJkK3f0GkPE– tên video:CSE122-GK-SV07-Nguyễn Văn Công-SafeNeighborhood
-- GitHub:
+- GitHub:https://github.com/nguyenvancong18032007-cmd/SafeNeighborhood.git
