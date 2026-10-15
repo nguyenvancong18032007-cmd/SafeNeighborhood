@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Báo cáo sự cố - SafeNeighborhood</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bieu-tuong-khien" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9.5 12l2 2 3.5-4"/></symbol>
+  <symbol id="bieu-tuong-canh-bao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 20h20z"/><path d="M12 10v4M12 17v.5"/></symbol>
+  <symbol id="bieu-tuong-chuong" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M10 21h4"/></symbol>
+  <symbol id="bieu-tuong-tim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+  <symbol id="bieu-tuong-ban-do" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2zM9 4v14M15 6v14"/></symbol>
+  <symbol id="bieu-tuong-tai-lieu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 3h8l5 5v13H6zM14 3v5h5M9 13h7M9 17h7"/></symbol>
+  <symbol id="bieu-tuong-luoi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></symbol>
+  <symbol id="bieu-tuong-nguoi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6M16 4a4 4 0 010 8M22 21c0-3-2-5-4-5.5"/></symbol>
+  <symbol id="bieu-tuong-ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M10 3l1.8 5.2L17 10l-5.2 1.8L10 17l-1.8-5.2L3 10l5.2-1.8zM18 15l.8 2.2L21 18l-2.2.8L18 21l-.8-2.2L15 18l2.2-.8z"/></symbol>
+  <symbol id="bieu-tuong-tich" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="bieu-tuong-dong" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="bieu-tuong-nha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11l9-8 9 8v10h-6v-6H9v6H3z"/></symbol>
+  <symbol id="bieu-tuong-mui-ten" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="bieu-tuong-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+</svg>
+
+<div class="khung-ung-dung">
+  <aside class="thanh-ben" id="thanhBen" aria-label="Thanh điều hướng">
+    <a class="thuong-hieu" href="#">
+      <span class="logo"><svg width="22" height="22"><use href="#bieu-tuong-khien"/></svg></span>
+      <span><strong>Safe<em>Neighborhood</em></strong><small>An toàn từ cộng đồng</small></span>
+    </a>
+    <div class="khoi-vai-tro">
+      <label for="chonVaiTro">Không gian làm việc</label>
+      <select id="chonVaiTro">
+        <option>Cư dân</option><option>Vận hành</option><option>Điều phối</option><option>Quản trị</option>
+      </select>
+    </div>
+    <nav>
+      <p class="tieu-de-nhom">Điều hướng</p>
+      <a class="muc-menu" href="#"><svg><use href="#bieu-tuong-ban-do"/></svg>Bản đồ sự cố</a>
+      <a class="muc-menu dang-chon" href="#" aria-current="page"><svg><use href="#bieu-tuong-tai-lieu"/></svg>Báo cáo sự cố</a>
+      <a class="muc-menu" href="#"><svg><use href="#bieu-tuong-luoi"/></svg>Sự cố của tôi</a>
+      <a class="muc-menu" href="#"><svg><use href="#bieu-tuong-nguoi"/></svg>Hồ sơ</a>
+    </nav>
+    <nav class="nhom-duoi">
+      <p class="tieu-de-nhom">Tham chiếu</p>
+      <a class="muc-menu" href="#"><svg><use href="#bieu-tuong-luoi"/></svg>Design System</a>
+      <a class="muc-menu" href="#"><svg><use href="#bieu-tuong-ai"/></svg>AI States Reference</a>
+    </nav>
+    <div class="nguoi-dung-chan">
+      <span class="anh-dai-dien">NA</span>
+      <span><strong>Nguyễn Minh An</strong><small id="vaiTroHienTai">Cư dân</small></span>
+      <span class="ba-cham">···</span>
+    </div>
+  </aside>
+
+  <div class="noi-dung-chinh">
+    <header class="thanh-tren">
+      <button class="nut-menu" id="nutMenu" aria-label="Mở menu"><svg width="22" height="22"><use href="#bieu-tuong-menu"/></svg></button>
+      <div class="duong-dan"><svg width="16" height="16"><use href="#bieu-tuong-nha"/></svg><span>/</span><strong>Báo cáo sự cố</strong></div>
+      <div class="khoi-phai">
+        <label class="o-tim-kiem">
+          <svg width="18" height="18"><use href="#bieu-tuong-tim"/></svg>
+          <input type="search" id="oTimKiem" placeholder="Tìm kiếm mã sự cố, địa điểm...">
+          <kbd>⌘ K</kbd>
+        </label>
+        <div class="khoi-thong-bao">
+          <button class="nut-chuong" id="nutChuong" aria-label="Thông báo" aria-expanded="false">
+            <svg width="22" height="22"><use href="#bieu-tuong-chuong"/></svg>
+            <span class="huy-hieu" id="huyHieu">3</span>
+          </button>
+          <section class="hop-thong-bao" id="hopThongBao" hidden>
+            <div class="dau-hop"><h2>Thông báo</h2><button id="nutDanhDauDaDoc">Đánh dấu đã đọc</button></div>
+            <ul id="danhSachThongBao"></ul>
+          </section>
+        </div>
+        <div class="nguoi-dung-tren"><span class="anh-dai-dien">NA</span><span><strong>Minh An</strong><small>Cư dân</small></span></div>
+      </div>
+    </header>
+
+    <main class="trang-chinh">
+      <header class="tieu-de-trang">
+        <p class="nhan-nho">Báo cáo mới</p>
+        <h1>Báo cáo sự cố</h1>
+        <p>Cung cấp thông tin chính xác để đội vận hành hỗ trợ nhanh hơn.</p>
+      </header>
+
+      <ol class="cac-buoc" id="cacBuoc">
+        <li class="buoc da-xong"><span class="vong"><svg width="16" height="16"><use href="#bieu-tuong-tich"/></svg></span><span><small>Bước 1</small><strong>Vị trí &amp; Hình ảnh</strong></span></li>
+        <li class="buoc dang-lam"><span class="vong">2</span><span><small>Bước 2</small><strong>Chi tiết sự cố</strong></span></li>
+        <li class="buoc"><span class="vong">3</span><span><small>Bước 3</small><strong>Xem lại &amp; Gửi</strong></span></li>
+      </ol>
+
+      <div class="luoi-hai-cot">
+        <form class="the-bieu-mau" id="bieuMauSuCo" novalidate>
+          <div class="dau-the"><span class="so-buoc">2</span><div><h2>Chi tiết sự cố</h2><p>Mô tả rõ vấn đề bạn quan sát được</p></div></div>
+
+          <fieldset class="nhom-truong">
+            <legend>Loại sự cố <abbr title="bắt buộc">*</abbr></legend>
+            <div class="luoi-loai" id="luoiLoai"></div>
+          </fieldset>
+
+          <div class="nhom-truong">
+            <label for="tieuDe">Tiêu đề <abbr title="bắt buộc">*</abbr></label>
+            <input type="text" id="tieuDe" placeholder="Ví dụ: Đèn đường không hoạt động tại ngã tư" maxlength="100">
+            <p class="loi" id="loiTieuDe" role="alert" hidden>Vui lòng nhập tiêu đề sự cố.</p>
+          </div>
+
+          <div class="nhom-truong">
+            <label for="moTa">Mô tả chi tiết <abbr title="bắt buộc">*</abbr></label>
+            <textarea id="moTa" rows="4" maxlength="500">Đèn đường phía trước số 24 đã tắt khoảng ba ngày, khu vực khá tối và khó quan sát vào ban đêm.</textarea>
+            <p class="dem-ky-tu"><span id="demKyTu">94</span> / 500 ký tự</p>
+            <p class="loi" id="loiMoTa" role="alert" hidden>Mô tả cần ít nhất 10 ký tự.</p>
+          </div>
+
+          <fieldset class="nhom-truong">
+            <legend>Mức độ khẩn cấp</legend>
+            <div class="luoi-khan-cap" id="luoiKhanCap"></div>
+          </fieldset>
+
+          <label class="khung-dong-y">
+            <input type="checkbox" id="congKhaiViTri" checked>
+            <span><strong>Cho phép công khai vị trí</strong><small>Vị trí chính xác sẽ được hiển thị trên bản đồ cộng đồng.</small></span>
+          </label>
+
+          <div class="hang-nut">
+            <button type="button" class="nut nut-vien" id="nutQuayLai">Quay lại</button>
+            <button type="submit" class="nut nut-chinh">Gửi báo cáo <svg width="16" height="16"><use href="#bieu-tuong-mui-ten"/></svg></button>
+          </div>
+        </form>
+
+        <aside class="the-ai" aria-label="Gợi ý từ Safe AI">
+          <div class="dau-ai">
+            <span class="logo-ai"><svg width="20" height="20"><use href="#bieu-tuong-ai"/></svg></span>
+            <div><small>Safe AI</small><h2>Phát hiện sự cố trùng lặp</h2></div>
+            <span class="nhan-ai">● AI</span>
+          </div>
+          <div class="trang-thai-ai" id="trangThaiAI" hidden></div>
+          <div class="ket-qua-ai">
+            <div class="hang-ket-qua"><h3>Có 2 sự cố tương tự gần đây</h3><b>87%</b></div>
+            <p>AI đã tìm thấy các báo cáo gần vị trí bạn chọn.</p>
+            <ul class="danh-sach-trung" id="danhSachTrung"></ul>
+            <details class="vi-sao"><summary>Vì sao có kết quả này?</summary><p>Safe AI so sánh loại sự cố, mô tả và khoảng cách vị trí với các báo cáo trong 7 ngày qua.</p></details>
+          </div>
+          <div class="hang-nut-ai">
+            <button type="button" class="nut nut-chinh nut-nho" id="nutChapNhan">Chấp nhận</button>
+            <button type="button" class="nut nut-vien nut-nho" id="nutSua">Sửa</button>
+            <button type="button" class="nut-chu" id="nutTuChoi">Từ chối</button>
+            <button type="button" class="nut-chu nut-tim" id="nutTaoLai"><svg width="14" height="14"><use href="#bieu-tuong-ai"/></svg>Tạo lại</button>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+</div>
+<div class="khung-toast" id="khungToast" aria-live="polite"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
